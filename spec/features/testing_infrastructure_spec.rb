@@ -1,8 +1,11 @@
 require 'spec_helper'
 
-feature 'Testing infrastructure' do
-  scenario 'Can run app and check page content' do
+
+feature 'Filling out the form' do
+  scenario 'Can fill form out and posts valid value' do
     visit('/')
-    expect(page).to have_content 'Testing infrastructure working!'
+    fill_in('name', with: 'John')
+    click_on('Submit')
+    expect(page).to have_content 'John'
   end
 end
