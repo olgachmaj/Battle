@@ -13,7 +13,6 @@ feature 'Attacking takes away players 2 HP' do
     visit('/')
     sign_in_and_play
     click_on'Attack'
-    expect(page).to have_content "John vs. John\nJohn: 50HP"
-
+    expect(page).to have_content "John vs John John 50 HP"
   end
 end
